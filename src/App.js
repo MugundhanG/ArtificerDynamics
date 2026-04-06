@@ -18,8 +18,8 @@ export default function App() {
         <HeroSection />
         <StatsSection />
         <ServicesOverview />
-        <AboutSection />
         <ServiceDetails />
+        <AboutSection />        
         <PortfolioSection />
         <TestimonialsSection />
         <CTASection />

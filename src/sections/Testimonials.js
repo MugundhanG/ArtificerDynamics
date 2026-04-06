@@ -34,21 +34,7 @@ function FadeIn({ children, delay = 0, className = '' }) {
 
 export default function TestimonialsSection() {
   return (
-    <>
-      {/* Client Logos */}
-      <section className="py-16 bg-white border-y border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-gray-400 text-sm uppercase tracking-widest mb-10">Trusted by Industry Leaders</p>
-          <div className="flex flex-wrap items-center justify-center gap-12">
-            {clientLogos.map(logo => (
-              <div key={logo} className="text-gray-300 font-heading font-bold text-2xl hover:text-gray-500 transition-colors cursor-default">
-                {logo}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+    <>     
       {/* Testimonials */}
       <section className="py-24 lg:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
