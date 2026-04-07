@@ -1,84 +1,154 @@
 const projects = [
   {
     id: 1,
-    title: 'Turbine Blade Optimization',
-    category: 'FEA Analysis',
-    tag: 'fea-analysis',
-    description: 'Performed comprehensive FEA analysis on gas turbine blades to optimize material distribution and reduce thermal stress concentrations by 34%.',
-    client: 'Energy Sector Client',
-    results: ['34% stress reduction', '18% weight savings', '2x fatigue life improvement'],
-    type: 'analysis'
-  },
-  {
-    id: 2,
-    title: 'Legacy Pump Assembly Digitization',
-    category: '2D to 3D Conversion',
-    tag: '2d-to-3d-conversion',
-    description: 'Converted 200+ legacy 2D drawings of industrial pump assemblies into fully parametric 3D SolidWorks models with complete BOM documentation.',
-    client: 'Manufacturing Client',
-    results: ['200+ drawings converted', '99.7% dimensional accuracy', '60% faster design modifications'],
+    title: 'Tyre Recycle Unit',
+    category: 'Reverse Engineering',
+    tag: 'reverse-engineering',
+    description: 'Full reverse engineering of a tyre recycling unit — shredder assembly with conveyor and motor drive system — modelled in SolidWorks with complete assembly and rendering.',
+    client: 'Tyre Recycling Industry',
+    results: ['Full assembly modelled', 'Photo-realistic rendering', 'Production-ready CAD'],
     type: 'before-after'
   },
   {
+    id: 2,
+    title: 'Tyre Recycle Plant Layout',
+    category: 'Layout Design',
+    tag: 'layout-design',
+    description: 'Complete plant layout design for a tyre recycling facility including shredder, conveyor system, dust extraction and material handling equipment arranged for optimal workflow.',
+    client: 'Recycling Plant Client',
+    results: ['Full plant layout', 'Equipment arrangement', 'Material flow optimized'],
+    type: 'layout'
+  },
+  {
     id: 3,
-    title: 'Automotive Bracket Reverse Engineering',
+    title: 'De-Beading Machine',
     category: 'Reverse Engineering',
     tag: 'reverse-engineering',
-    description: 'Reverse engineered discontinued automotive mounting brackets using 3D scanning, creating manufacturing-ready CAD models for aftermarket production.',
-    client: 'Automotive Parts Manufacturer',
-    results: ['0.05mm scan accuracy', 'Full GD&T documentation', 'Production-ready in 2 weeks'],
+    description: 'Reverse engineering of a tyre de-beading machine, reconstructing all structural and mechanical components into a precise SolidWorks 3D assembly model.',
+    client: 'Tyre Processing Client',
+    results: ['Accurate 3D reconstruction', 'Full mechanical assembly', 'SolidWorks deliverable'],
     type: 'before-after'
   },
   {
     id: 4,
-    title: 'Smart Factory Layout',
-    category: 'Layout Design',
-    tag: 'layout-design',
-    description: 'Designed an optimized manufacturing floor layout for a smart factory, improving material flow efficiency by 40% and reducing floor space requirements.',
-    client: 'Electronics Manufacturer',
-    results: ['40% flow improvement', '25% space reduction', 'ISO 14644 compliant'],
-    type: 'layout'
+    title: 'Assembly Line Concept Design',
+    category: 'Conceptual Design',
+    tag: 'conceptual-design',
+    description: 'Conceptual design of an automated assembly line structure with multi-station fixture arrangement, overhead gantry and conveyor integration for industrial manufacturing.',
+    client: 'Manufacturing Client',
+    results: ['Multi-station design', 'Gantry integration', 'Fully modelled concept'],
+    type: 'concept'
   },
   {
     id: 5,
-    title: 'Next-Gen Drone Frame',
+    title: 'Pitch Changing Technology Assembly',
     category: 'Conceptual Design',
     tag: 'conceptual-design',
-    description: 'Developed conceptual design for a commercial delivery drone frame with integrated sensor mounts, achieving optimal strength-to-weight ratio through topology optimization.',
-    client: 'Aerospace Startup',
-    results: ['45% lighter than benchmark', '3 design iterations', 'Patent-pending geometry'],
+    description: 'Concept design of a pitch changing technology assembly — a large rotating drum mechanism with drive motor and base frame, fully modelled and rendered in SolidWorks.',
+    client: 'Industrial Equipment Client',
+    results: ['Full concept assembly', 'Drive system designed', 'Parametric model'],
     type: 'concept'
   },
   {
     id: 6,
-    title: 'Pressure Vessel Certification',
-    category: 'FEA Analysis',
-    tag: 'fea-analysis',
-    description: 'Conducted ASME-compliant FEA analysis for industrial pressure vessels, validating design safety factors and supporting regulatory certification.',
-    client: 'Process Industry Client',
-    results: ['ASME VIII compliant', 'Safety factor validated', 'Zero design changes needed'],
-    type: 'analysis'
+    title: 'Manual Welding Fixture',
+    category: 'Conceptual Design',
+    tag: 'conceptual-design',
+    description: 'Concept design of a manual welding fixture with adjustable clamps, locating pins, and a rigid steel frame structure — designed for repeatability and ease of use.',
+    client: 'Fabrication Client',
+    results: ['Adjustable clamp design', 'Rigid frame structure', 'Ready for manufacturing'],
+    type: 'concept'
   },
   {
     id: 7,
-    title: 'Heritage Engine Documentation',
-    category: 'Reverse Engineering',
-    tag: 'reverse-engineering',
-    description: 'Digitized a vintage aircraft engine with 150+ components using structured light scanning, preserving engineering heritage in modern CAD format.',
-    client: 'Aviation Museum',
-    results: ['150+ parts digitized', 'Complete assembly model', 'Archival documentation'],
+    title: 'Water Tank 2D to 3D Conversion',
+    category: '2D to 3D Conversion',
+    tag: '2d-to-3d-conversion',
+    description: 'Converted 2D engineering drawings of large industrial water storage tanks into detailed 3D SolidWorks models with design modifications and complete structural detailing.',
+    client: 'Industrial Storage Client',
+    results: ['2D to 3D converted', 'Design modifications applied', 'Structural detailing complete'],
     type: 'before-after'
   },
   {
     id: 8,
-    title: 'Medical Device Housing',
+    title: '990L Diesel Tank 3D Design',
+    category: '2D to 3D Conversion',
+    tag: '2d-to-3d-conversion',
+    description: 'Converted 2D drawings of a 990-litre diesel storage tank into a fully detailed transparent SolidWorks 3D model with internal baffles, fittings, and base frame.',
+    client: 'Fuel Storage Client',
+    results: ['Full 3D model', 'Internal structure detailed', 'Transparent view rendered'],
+    type: 'before-after'
+  },
+  {
+    id: 9,
+    title: 'Hanging Conveyor Reverse Engineering',
+    category: 'Reverse Engineering',
+    tag: 'reverse-engineering',
+    description: 'Reverse engineered a hanging conveyor system including the overhead rail, trolley mechanisms and drive components from physical measurements into SolidWorks assembly.',
+    client: 'Material Handling Client',
+    results: ['Complete system modelled', 'Drive mechanism captured', 'Assembly documentation'],
+    type: 'before-after'
+  },
+  {
+    id: 10,
+    title: 'Rotary Dryer Layout Design',
+    category: 'Layout Design',
+    tag: 'layout-design',
+    description: 'Layout design of a rotary dryer system including drum, support frame, burner assembly, dust collector and discharge conveyor arranged within a defined plant footprint.',
+    client: 'Process Industry Client',
+    results: ['Full system layout', 'Footprint optimized', 'Equipment coordinated'],
+    type: 'layout'
+  },
+  {
+    id: 11,
+    title: 'Paint Booth Assembly',
     category: 'Conceptual Design',
     tag: 'conceptual-design',
-    description: 'Created conceptual designs for a portable medical diagnostic device, balancing ergonomics, thermal management, and IP67 sealing requirements.',
-    client: 'MedTech Startup',
-    results: ['IP67 rated design', 'FDA design controls', '5 concept variants delivered'],
+    description: 'Detailed 3D model of a large industrial paint booth with modular panel construction, access doors, ventilation slots and internal lighting arrangement.',
+    client: 'Automotive Finishing Client',
+    results: ['Modular panel design', 'Ventilation integrated', 'Full assembly model'],
     type: 'concept'
-  }
+  },
+  {
+    id: 12,
+    title: 'Tyre Recycle Tramel Machine',
+    category: 'Conceptual Design',
+    tag: 'conceptual-design',
+    description: 'Complete 3D design of a tyre recycling tramel (trommel) screening machine with rotating drum, discharge chute, and support structure modelled in SolidWorks.',
+    client: 'Recycling Equipment Client',
+    results: ['Rotating drum designed', 'Discharge system included', 'Full assembly model'],
+    type: 'concept'
+  },
+  {
+    id: 13,
+    title: 'Sodium Hydroxide Dosing Skid',
+    category: 'Layout Design',
+    tag: 'layout-design',
+    description: 'SolidWorks Routing-based 3D model of a sodium hydroxide storage and dosing skid (CS) with piping, pumps, valves and instrumentation within a structural steel frame.',
+    client: 'Water Treatment Client',
+    results: ['Routing piping modelled', 'P&ID translated to 3D', 'Skid frame designed'],
+    type: 'layout'
+  },
+  {
+    id: 14,
+    title: 'Biocide Dosing Tank (CPVC)',
+    category: 'Layout Design',
+    tag: 'layout-design',
+    description: 'Full 3D routing model of a biocide storage and dosing system using CPVC piping — including storage vessel, metering pumps, valves, and instrumentation layout.',
+    client: 'Chemical Process Client',
+    results: ['CPVC routing modelled', 'Vessel and pump layout', 'Isometric drawings ready'],
+    type: 'layout'
+  },
+  {
+    id: 15,
+    title: 'Street Food Shop & Cart Design',
+    category: 'Conceptual Design',
+    tag: 'conceptual-design',
+    description: 'Conceptual 3D designs of a street food shop counter unit and a mobile food cart with canopy, storage shelves and display area — rendered in real-world environments.',
+    client: 'F&B Entrepreneur',
+    results: ['Shop & cart designed', 'Photorealistic renders', 'Real-world environment viz'],
+    type: 'concept'
+  },
 ];
 
 export default projects;

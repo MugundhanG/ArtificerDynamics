@@ -72,12 +72,13 @@ function ServiceSection({ service, index }) {
 
           <div className={!isEven ? 'lg:col-start-1' : ''}>
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-primary to-secondary rounded-2xl overflow-hidden grid-bg flex items-center justify-center">
-                <div className="text-center p-8">
-                  <service.icon size={64} className="text-accent/30 mx-auto mb-4" />
-                  <h4 className="text-white/80 font-heading font-semibold text-xl">{service.title}</h4>
-                  <p className="text-gray-500 text-sm mt-2">Engineering Excellence</p>
-                </div>
+              <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                <img
+                  src={`/services/${service.id}.jpg`}
+                  alt={`${service.title} sample work`}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-accent/10 rounded-2xl -z-10" />
             </div>

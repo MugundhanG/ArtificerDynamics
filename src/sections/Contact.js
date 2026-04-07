@@ -26,13 +26,28 @@ function FadeIn({ children, delay = 0, className = '' }) {
 export default function ContactSection() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', service: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [phoneError, setPhoneError] = useState('');
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    if (name === 'phone') {
+      const digits = value.replace(/\D/g, '');
+      if (value && !/^[6-9]\d{0,9}$/.test(digits)) {
+        setPhoneError('Enter a valid Indian mobile number (starts with 6–9, 10 digits)');
+      } else {
+        setPhoneError('');
+      }
+    }
+    setForm({ ...form, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const digits = form.phone.replace(/\D/g, '');
+    if (form.phone && !/^[6-9]\d{9}$/.test(digits)) {
+      setPhoneError('Enter a valid 10-digit Indian mobile number (e.g. 98765 43210)');
+      return;
+    }
     setSubmitted(true);
   };
 
@@ -167,15 +182,22 @@ export default function ContactSection() {
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          name="phone"
-                          value={form.phone}
-                          onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors"
-                          placeholder="+1 (123) 456-7890"
-                        />
+                        <div className="relative">
+                          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm font-medium select-none">+91</span>
+                          <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            value={form.phone}
+                            onChange={handleChange}
+                            maxLength={10}
+                            className={`w-full pl-12 pr-4 py-3 bg-white border rounded-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-1 transition-colors ${phoneError ? 'border-red-400 focus:border-red-400 focus:ring-red-400' : 'border-gray-200 focus:border-accent focus:ring-accent'}`}
+                            placeholder="98765 43210"
+                          />
+                        </div>
+                        {phoneError && (
+                          <p className="mt-1.5 text-xs text-red-500">{phoneError}</p>
+                        )}
                       </div>
                       <div>
                         <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">Required Service *</label>
@@ -196,11 +218,10 @@ export default function ContactSection() {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Project Description *</label>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Project Description</label>
                       <textarea
                         id="message"
-                        name="message"
-                        required
+                        name="message"                        
                         rows={5}
                         value={form.message}
                         onChange={handleChange}

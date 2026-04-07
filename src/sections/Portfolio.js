@@ -5,7 +5,7 @@ import { FiExternalLink } from 'react-icons/fi';
 import projects from '../data/projects';
 import SectionHeading from '../components/SectionHeading';
 
-const categories = ['All', 'Conceptual Design', 'Reverse Engineering', 'Layout Design', '2D to 3D Conversion', 'FEA Analysis'];
+const categories = ['All', 'Conceptual Design', 'Reverse Engineering', 'Layout Design', '2D to 3D Conversion'];
 
 const typeColors = {
   analysis: 'from-blue-600 to-indigo-900',
