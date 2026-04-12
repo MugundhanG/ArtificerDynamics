@@ -20,18 +20,16 @@ export default function AboutSection() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
               <div className="relative">
-                <div className="aspect-[4/3] bg-gradient-to-br from-secondary to-primary rounded-2xl overflow-hidden grid-bg flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-24 h-24 mx-auto mb-6 border-2 border-accent/30 rounded-full flex items-center justify-center">
-                      <span className="font-heading font-bold text-3xl text-accent">AD</span>
-                    </div>
-                    <p className="text-white/80 font-heading font-semibold text-xl">Engineering Precision</p>
-                    <p className="text-gray-500 text-sm mt-1">Delivering Innovation</p>
-                  </div>
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                  <img
+                    src="/about.jpg"
+                    alt="Artificer Dynamics engineering team"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-accent text-white rounded-2xl p-6 shadow-xl hidden sm:block">
                   <div className="text-3xl font-heading font-bold">15+</div>
-                  <div className="text-sm opacity-80">Years of Excellence</div>
+                  <div className="text-sm opacity-90 font-medium">Years of Excellence</div>
                 </div>
               </div>
             </FadeIn>

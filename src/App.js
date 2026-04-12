@@ -21,7 +21,7 @@ export default function App() {
         <ServiceDetails />
         <AboutSection />        
         <PortfolioSection />
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
         <CTASection />
         <ContactSection />
       </main>
