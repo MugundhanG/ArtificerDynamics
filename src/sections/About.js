@@ -22,7 +22,7 @@ export default function AboutSection() {
               <div className="relative">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="/about.jpg"
+                    src={`${process.env.PUBLIC_URL}/about.jpg`}
                     alt="Artificer Dynamics engineering team"
                     className="w-full h-full object-cover"
                   />

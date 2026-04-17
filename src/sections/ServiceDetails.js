@@ -74,7 +74,7 @@ function ServiceSection({ service, index }) {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
                 <img
-                  src={`/services/${service.id}.jpg`}
+                  src={`${process.env.PUBLIC_URL}/services/${service.id}.jpg`}
                   alt={`${service.title} sample work`}
                   className="w-full h-full object-cover"
                   loading="lazy"
