@@ -18,9 +18,9 @@ export default function App() {
         <HeroSection />
         <StatsSection />
         <ServicesOverview />
-        {/* <ServiceDetails /> */}
+        <ServiceDetails />
         <AboutSection />        
-        {/* <PortfolioSection /> */}
+        <PortfolioSection />
         {/* <TestimonialsSection /> */}
         <CTASection />
         <ContactSection />
