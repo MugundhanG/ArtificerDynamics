@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ArtificerDynamics/static/css/main.2d713be3.css",
-    "main.js": "/ArtificerDynamics/static/js/main.9bb30600.js",
+    "main.js": "/ArtificerDynamics/static/js/main.53521e6b.js",
     "index.html": "/ArtificerDynamics/index.html",
     "main.2d713be3.css.map": "/ArtificerDynamics/static/css/main.2d713be3.css.map",
-    "main.9bb30600.js.map": "/ArtificerDynamics/static/js/main.9bb30600.js.map"
+    "main.53521e6b.js.map": "/ArtificerDynamics/static/js/main.53521e6b.js.map"
   },
   "entrypoints": [
     "static/css/main.2d713be3.css",
-    "static/js/main.9bb30600.js"
+    "static/js/main.53521e6b.js"
   ]
 }
